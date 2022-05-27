@@ -5,7 +5,7 @@
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
-import axios from 'axios'
+import jsonp from 'jsonp'
 
 export default {
   name: 'App',
@@ -13,9 +13,15 @@ export default {
     HelloWorld
   },
   mounted(){
-    //Cors跨域
+    /* //Cors跨域
     let url = "接口地址"
     axios.get(url).then(()=>{
+      
+    }) */
+
+    //jsonp跨域
+    let url = "接口地址"
+    jsonp(url,()=>{
       
     })
   }
