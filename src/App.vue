@@ -1,29 +1,25 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <router-view></router-view>
+  </div>
+ 
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-import jsonp from 'jsonp'
+
 
 export default {
-  name: 'App',
+  name: 'app',
   components: {
-    HelloWorld
+    
+  },
+  data(){
+    return{
+      
+    }
   },
   mounted(){
-    /* //Cors跨域
-    let url = "接口地址"
-    axios.get(url).then(()=>{
-      
-    }) */
-
-    //jsonp跨域
-    let url = "接口地址"
-    jsonp(url,()=>{
-      
-    })
+    
   }
 }
 </script>
