@@ -9,7 +9,7 @@
 <script>
 
 export default{
-    name:'order',
+    name:'nav-order',
 
 }
 </script>
