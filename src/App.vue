@@ -5,11 +5,19 @@
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import axios from 'axios'
 
 export default {
   name: 'App',
   components: {
     HelloWorld
+  },
+  mounted(){
+    //Cors跨域
+    let url = "接口地址"
+    axios.get(url).then(()=>{
+      
+    })
   }
 }
 </script>
