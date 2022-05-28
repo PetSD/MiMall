@@ -8,13 +8,14 @@ import Order from './pages/order.vue'
 import OrderConfirm from './pages/orderConfirm.vue'
 import OrderList from './pages/orderList.vue'
 import OrderPay from './pages/orderPay.vue'
-
+import AliPay from './pages/alipay.vue'
 
 const routes = [
     {
         path:'/',
         name:'home',
         component:Home,
+        redirect:'/index',
         children:[
             {
                 path:'/index',
@@ -42,19 +43,24 @@ const routes = [
         component:Order,
         children:[
             {
-                path:'/list',
+                path:'list',
                 name:'order-list',
                 component:OrderList,
             },
             {
-                path:'/list',
-                name:'order-comfirm',
+                path:'confirm',
+                name:'order-confirm',
                 component:OrderConfirm,
             },
             {
-                path:'/pay',
+                path:'pay',
                 name:'order-pay',
                 component:OrderPay,
+            },
+            {
+                path:'alipay',
+                name:'alipay',
+                component:AliPay,
             },
         ]
     }
