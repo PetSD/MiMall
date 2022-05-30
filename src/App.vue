@@ -6,7 +6,7 @@
 </template>
 
 <script>
-
+// import storage from './storage/index.js'
 
 export default {
   name: 'app',
@@ -19,7 +19,9 @@ export default {
     }
   },
   mounted(){
-    
+    // storage.setItem('a',1);  新增一个参数
+    // storage.setItem('user',{a:1});  重写user模块
+    // storage.setItem('abc',{a:1},'user'); //在user模块上新增abc
   }
 }
 </script>
