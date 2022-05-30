@@ -15,13 +15,18 @@ export default {
   },
   data(){
     return{
-      
+      res:{}
     }
   },
   mounted(){
     // storage.setItem('a',1);  新增一个参数
     // storage.setItem('user',{a:1});  重写user模块
     // storage.setItem('abc',{a:1},'user'); //在user模块上新增abc
+
+    // 本地加载请求静态json文件的形式
+    this.axios.get('/mock/user/login.json').then((res)=>{
+      this.res = res;
+    })
   }
 }
 </script>
