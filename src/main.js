@@ -3,11 +3,14 @@ import App from './App.vue'
 import router from './router'
 import axios from 'axios';
 import VueAxios from 'vue-axios';
+import env from './env'
 
 
 // 根据前端的跨域方式做调整  /a/b : /api/a/b => /a/b
 axios.defaults.baseURL = '/api';
 axios.defaults.timeout = 8000;
+// 根据部环境变量获取不同的请求地址
+axios.defaults.baseURL = env.baseURL;
 // 接口错误拦截
 axios.interceptors.response.use(function(response){
     let res = response.data;
@@ -22,5 +25,6 @@ axios.interceptors.response.use(function(response){
 })
 
 const app = createApp(App);
+app.use(VueAxios,axios)
 app.use(router)
 app.mount('#app')
