@@ -13,7 +13,8 @@ if(mock){
 }
 
 // 根据前端的跨域方式做调整  /a/b : /api/a/b => /a/b
-axios.defaults.baseURL = 'https://mock.apifox.cn/m1/1052385-0-default';
+// axios.defaults.baseURL = 'https://mock.apifox.cn/m1/1052385-0-default';
+axios.defaults.baseURL = '/api';
 axios.defaults.timeout = 8000;
 // 根据部环境变量获取不同的请求地址
 // axios.defaults.baseURL = env.baseURL;
