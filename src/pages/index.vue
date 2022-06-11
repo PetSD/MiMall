@@ -1,14 +1,18 @@
 <template>
     <div>
-        <router-view></router-view>
+        <service-bar></service-bar>
     </div>
 </template>
 
 <script>
 
+import ServiceBar from './../components/ServiceBar.vue'
+
 export default{
-    // eslint-disable-next-line vue/multi-word-component-names
-    name:'index'
+    name:'index',
+    components:{
+        ServiceBar
+    }
 
 }
 </script>
